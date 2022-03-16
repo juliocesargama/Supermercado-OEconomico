@@ -14,5 +14,18 @@ public class main {
         Client c3 = new Client(3, "Jose", "Silveira", LocalDate.parse("21/06/2019"));
 
         List<Client> clientList = Arrays.asList(c1, c2, c3);
+
+        Client client = findById(clientList, 3);
+        System.out.println("client found: " + client);
+    }
+
+    public static Client findById(List<Client> clientList, Integer clientId) {
+        Client client =  clientList.stream().filter(x -> x.getId().equals(clientId))
+                .findFirst()
+                .orElse(null);
+        if (client == null) {
+            System.out.println("Client id not found");
+        }
+        return client;
     }
 }
