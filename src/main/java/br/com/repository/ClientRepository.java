@@ -19,7 +19,6 @@ public class ClientRepository implements Crud<Client> {
     @Override
     public Client update(Client client) {
         Client clienteBanco = this.findById(client.getId());
-        System.out.println("clienteBancoss" + client);
         if(clienteBanco != null){
             this.delete(client.getId());
             this.create(client);
