@@ -20,4 +20,8 @@ public class Purchase {
     private List<Item> items;
     private BigDecimal totalPrice;
     private Date purchaseDate;
+
+    public void calculaTotalPrice() {
+        totalPrice = BigDecimal.valueOf(items.stream().mapToDouble(item -> item.getPrice().doubleValue()).sum());
+    }
 }
