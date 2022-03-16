@@ -16,7 +16,7 @@ public class Client {
     public Client(int id, String name, String lastname, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
-        this.lastname = lastname
+        this.lastname = lastname;
         this.createdAt = createdAt;
     }
 }
