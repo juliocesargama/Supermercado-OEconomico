@@ -36,8 +36,7 @@ public class ClientRepository implements Crud<Client> {
 
     @Override
     public Client findById(Integer id) {
-        Client clientBanco = clientes.stream().filter(c -> c.getId() == id).findFirst().orElse(null);
-        return clientBanco;
+        return clientes.stream().filter(c -> c.getId() == id).findFirst().orElse(null);
     }
 
     @Override
