@@ -3,6 +3,7 @@ package br.com.models;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter @Setter
@@ -14,6 +15,6 @@ public class Item {
     private String name;
     private BigDecimal price;
     private Integer quantity;
-    private Date expireDate;
+    private LocalDate expireDate;
 
 }
