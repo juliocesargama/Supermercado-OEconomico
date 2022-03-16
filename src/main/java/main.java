@@ -20,7 +20,20 @@ public class main {
         listaClientes(clientList);
     }
 
-    public static void listaClientes(List<Client> list) {
-        list.forEach(System.out::println);
+        List<Client> clientList = Arrays.asList(c1, c2, c3);
+
+        Client client = findById(clientList, 3);
+        System.out.println("client found: " + client);
+    }
+
+    public static Client findById(List<Client> clientList, Integer clientId) {
+        Client client =  clientList.stream().filter(x -> x.getId().equals(clientId))
+                .findFirst()
+                .orElse(null);
+        if (client == null) {
+            System.out.println("Client id not found");
+        }
+        return client;
+
     }
 }

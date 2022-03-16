@@ -6,7 +6,8 @@ isso, necessita poder efetuar operações de criação, consulta, eliminação o
 ![diagrama](https://user-images.githubusercontent.com/70298438/158505653-eff7f0d9-9d3d-4089-9113-91289530482d.jpeg)
 
 ### Material de apoio:
-- [PDF com o enunciado](https://drive.google.com/file/d/1FAeCq3fpPcaXyBgWIcBqHfQG7vSpUah7/view)
+- [PDF com o enunciado - Parte I](https://drive.google.com/file/d/1FAeCq3fpPcaXyBgWIcBqHfQG7vSpUah7/view)
+- [PDF com o enunciado - Parte II](https://drive.google.com/file/d/1NXuKXJ5x11DeIklbTNCCTLEJtQU0hqrc/view)
 - [Exemplo de Pull Request](https://github.com/aprenda-git/pull-request) (não precisa fazer fork)
 - [Declaração de classes em Java](https://www.devmedia.com.br/java-declaracao-e-utilizacao-de-classes/38374)
 - [Lombok em Projetos Java](https://receitasdecodigo.com.br/java/como-usar-o-lombok-em-projetos-java)
