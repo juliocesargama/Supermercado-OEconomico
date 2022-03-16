@@ -15,8 +15,11 @@ public class main {
 
         List<Client> clientList = Arrays.asList(c1, c2, c3);
 
-        Client client = findById(clientList, 3);
+        Client client = findById(clientList, 2);
         System.out.println("client found: " + client);
+
+        removeById(clientList, 3);
+        System.out.println(clientList);
     }
 
     public static void listaClientes(List<Client> list) {
@@ -32,4 +35,9 @@ public class main {
         }
         return client;
     }
+
+    public static void removeById(List<Client> clientList, Integer clientId) {
+        clientList.remove(findById(clientList, clientId));
+    }
 }
+
