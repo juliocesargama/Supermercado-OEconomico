@@ -1,6 +1,6 @@
 package br.com.models;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,5 +16,5 @@ public class Client {
     private Integer id;
     private String name;
     private String lastname;
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 }
