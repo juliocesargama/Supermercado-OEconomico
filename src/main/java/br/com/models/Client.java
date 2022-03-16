@@ -19,4 +19,9 @@ public class Client {
     private String name;
     private String lastname;
     private LocalDate createdAt;
+
+    @Override
+    public String toString(){
+        return getId() + " " + getName() + " " + getLastname();
+    }
 }

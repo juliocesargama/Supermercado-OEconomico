@@ -5,11 +5,10 @@ import br.com.models.Client;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ClientRepository implements Crud<Client> {
 
-    private static List<Client> clientes = new ArrayList<>();
+    private static ArrayList<Client> clientes = new ArrayList<>();
 
     @Override
     public Integer create(Client client) {
@@ -20,9 +19,11 @@ public class ClientRepository implements Crud<Client> {
     @Override
     public Client update(Client client) {
         Client clienteBanco = this.findById(client.getId());
+        System.out.println("clienteBancoss" + client);
         if(clienteBanco != null){
             this.delete(client.getId());
             this.create(client);
+            return client;
         }
 
         return null;
@@ -30,16 +31,14 @@ public class ClientRepository implements Crud<Client> {
 
     @Override
     public Boolean delete(Integer id) {
-        return null;
+        Client cliente = findById(id);
+        return clientes.remove(cliente);
     }
 
     @Override
     public Client findById(Integer id) {
-        Optional<Client> clientBanco = clientes.stream().filter(c -> c.getId() == id).findFirst();
-        if(clientBanco.isPresent()){
-            return clientBanco.get();
-        }
-        return null;
+        Client clientBanco = clientes.stream().filter(c -> c.getId() == id).findFirst().orElse(null);
+        return clientBanco;
     }
 
     @Override
