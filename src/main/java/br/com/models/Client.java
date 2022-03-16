@@ -1,4 +1,4 @@
-package br.com.client;
+package br.com.models;
 
 import java.time.LocalDateTime;
 
