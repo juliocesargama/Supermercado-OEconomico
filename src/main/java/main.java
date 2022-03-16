@@ -1,4 +1,5 @@
 import br.com.models.Client;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -14,5 +15,11 @@ public class main {
         Client c3 = new Client(3, "Jose", "Silveira", LocalDate.parse("21/06/2019", formatter));
 
         List<Client> clientList = Arrays.asList(c1, c2, c3);
+
+        listaClientes(clientList);
+    }
+
+    public static void listaClientes(List<Client> list) {
+        list.forEach(System.out::println);
     }
 }
