@@ -49,8 +49,10 @@ public class main {
 
             System.out.println("Add items to fatura");
             List<Item> itens = List.of(e1, e2, e3);
-            Purchase purchase = new Purchase(1, itens, 3, LocalDate.parse("08/12/2018", formatter));
+            itemRepository.create(1e)
 
+            itemRepository.getAll();
+            Purchase purchase = new Purchase(1, itemRepository.getAll(), new BigDecimal(100.00), LocalDate.parse("08/12/2018", formatter));
 
 
     }
