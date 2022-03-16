@@ -1,5 +1,6 @@
 import br.com.models.Item;
 import br.com.models.Client;
+import br.com.repository.ItemRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
