@@ -19,6 +19,10 @@ public class main {
         System.out.println("client found: " + client);
     }
 
+    public static void listaClientes(List<Client> list) {
+        list.forEach(System.out::println);
+    }
+
     public static Client findById(List<Client> clientList, Integer clientId) {
         Client client =  clientList.stream().filter(x -> x.getId().equals(clientId))
                 .findFirst()
