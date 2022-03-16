@@ -1,6 +1,7 @@
 package br.com.repository;
 
 import br.com.interfaces.Crud;
+import br.com.models.Item;
 import br.com.models.Purchase;
 
 import java.util.ArrayList;
@@ -25,7 +26,16 @@ public class PurchaseRepository implements Crud<Purchase> {
 
   @Override
   public Purchase update(Purchase purchase) {
+    Purchase purchaseData = this.findById(purchase.getId());
+
+    if ( purchaseData != null) {
+      this.delete(purchaseData.getId());
+      this.create(purchase);
+
+      return purchase;
+    }
     return null;
+
   }
 
   @Override
