@@ -1,14 +1,20 @@
 package br.com.client;
 
+import java.time.LocalDateTime;
+
 public class Client {
-    private int id;
+    private Integer id;
     private String name;
-    private String lastName;
+    private String CPF;
+    private String phone;
+    private LocalDateTime createdAt;
     
-    public Client(int id, String name, String lastName) {
+    public Client(int id, String name, String CPF, String phone, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
-        this.lastName = lastName;
+        this.CPF = CPF;
+        this.phone = phone;
+        this.createdAt = createdAt;
     }
     
     public int getId() {
@@ -19,8 +25,16 @@ public class Client {
         return name;
     }
     
-    public String getLastName() {
-        return lastName;
+    public String getCPF() {
+        return CPF;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
     
     public void setId(int id) {
@@ -31,12 +45,15 @@ public class Client {
         this.name = name;
     }
     
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
-    
-    @Override
-    public String toString() {
-        return "Client [id=" + id + ", name=" + name + ", lastName=" + lastName + "]";
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }
