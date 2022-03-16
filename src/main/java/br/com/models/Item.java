@@ -1,3 +1,5 @@
+package br.com.models;
+
 import lombok.*;
 
 import java.math.BigDecimal;
