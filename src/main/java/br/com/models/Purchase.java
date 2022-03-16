@@ -1,11 +1,9 @@
 package br.com.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -13,13 +11,14 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Purchase {
 
     private Integer Id;
     private Client client;
     private List<Item> items;
     private BigDecimal totalPrice;
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
 
     public void calculaTotalPrice() {
         totalPrice = BigDecimal.valueOf(items.stream().mapToDouble(item -> item.getPrice().doubleValue()).sum());
