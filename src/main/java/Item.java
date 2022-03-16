@@ -1,10 +1,11 @@
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Item {
 
     private Integer id;
@@ -13,11 +14,4 @@ public class Item {
     private Integer quantity;
     private Date expireDate;
 
-    public Item(Integer id, String name, BigDecimal price, Integer quantity, Date expireDate) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-        this.expireDate = expireDate;
-    }
 }
