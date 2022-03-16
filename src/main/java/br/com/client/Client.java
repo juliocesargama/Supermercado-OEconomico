@@ -10,15 +10,13 @@ import lombok.Setter;
 public class Client {
     private Integer id;
     private String name;
-    private String CPF;
-    private String phone;
+    private String lastname;
     private LocalDateTime createdAt;
     
-    public Client(int id, String name, String CPF, String phone, LocalDateTime createdAt) {
+    public Client(int id, String name, String lastname, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
-        this.CPF = CPF;
-        this.phone = phone;
+        this.lastname = lastname
         this.createdAt = createdAt;
     }
 }
