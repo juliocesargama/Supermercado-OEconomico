@@ -21,9 +21,9 @@ public class main {
         Client client = findById(clientList, 3);
         System.out.println("client found: " + client);
 
-        Item i1 = new Item(1, "Laranja", new BigDecimal("2.50"), 10, LocalDate.parse("20/10/2020"));
-        Item i2 = new Item(2, "Maçã", new BigDecimal("1.50"), 5, LocalDate.parse("20/10/2020"));
-        Item i3 = new Item(3, "Banana", new BigDecimal("3.50"), 15, LocalDate.parse("20/10/2020"));
+        Item i1 = new Item(1, "Laranja", new BigDecimal("2.50"), 10, LocalDate.parse("20/10/2020", formatter));
+        Item i2 = new Item(2, "Maçã", new BigDecimal("1.50"), 5, LocalDate.parse("20/10/2020", formatter));
+        Item i3 = new Item(3, "Banana", new BigDecimal("3.50"), 15, LocalDate.parse("20/10/2020", formatter));
 
         List<Item> itemList = Arrays.asList(i1, i2, i3);
     }
