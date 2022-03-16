@@ -2,6 +2,7 @@ import br.com.models.Client;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class main {
         Client c2 = new Client(2, "Ana", "Pereira", LocalDate.parse("09/04/2017", formatter));
         Client c3 = new Client(3, "Jose", "Silveira", LocalDate.parse("21/06/2019", formatter));
 
-        List<Client> clientList = Arrays.asList(c1, c2, c3);
+        List<Client> clientList = new ArrayList<>(Arrays.asList(c1, c2, c3));
 
         listaClientes(clientList);
     }
