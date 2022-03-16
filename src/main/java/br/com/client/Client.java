@@ -5,12 +5,14 @@ import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
+@Setter
 public class Client {
-    @Getter @Setter Integer id;
-    @Getter @Setter String name;
-    @Getter @Setter String CPF;
-    @Getter @Setter String phone;
-    @Getter @Setter LocalDateTime createdAt;
+    Integer id;
+    String name;
+    String CPF;
+    String phone;
+    LocalDateTime createdAt;
     
     public Client(int id, String name, String CPF, String phone, LocalDateTime createdAt) {
         this.id = id;
